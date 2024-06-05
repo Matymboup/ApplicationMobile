@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contact tel</title>
+    <!-- <link rel="stylesheet" href="lib/jquery.mobile.icons.min.css" />
+    <link rel="stylesheet" href="lib/jquery.mobile.structure-1.4.5.min.css"> -->
+    <link rel="stylesheet" href="lib/themes/samatheme2.min.css"> 
+    <link rel="stylesheet" href="lib/jquery.mobile-1.4.5.min.css">
+    <link rel="stylesheet" href="css/index.css">
+   <script src="lib/jquery.min.js"></script>
+	<script src="lib/jquery.mobile-1.4.5.min.js"></script>
+   <script src="js/index.js"></script>
+   <script src="cordova.js"></script>
+</head>
+<body>
+    <div id="ListContact" data-role="page">
+        <div data-role="header">
+            <h1>Contact Tel</h1>
+        </div>
+        <div role="main" class="ui-content">
+          <a href="#AjoutContact" data-role="button" data-icon="arrow-r" data-iconpos="right">Ajouter</a>
+          <ul id="contactList" data-role="listview" data-inset="true" data-filter="true" data-filter-placeholder="Rechercher contact">
+          </ul>
+        </div>
+        <div data-role="footer" data-position="fixed">
+            <h1> DIC3 &copy; 2024</h1>
+        </div>
+    </div> 
+    <div id="AjoutContact" data-role="page">
+        <div data-role="header">
+            <h1>Ajouter un contact</h1>
+        </div>
+        <div role="main" class="ui-content">
+            <form id="addContactForm">
+                <div data-role="fieldcontain">
+                    <label for="contactName">Nom:</label>
+                    <input type="text" name="contactName" id="contactName">
+                </div>
+                <div data-role="fieldcontain">
+                    <label for="contactPhoneNumber">Numéro de téléphone:</label>
+                    <input type="tel" name="contactPhoneNumber" id="contactPhoneNumber">
+                </div>
+                <input type="submit" value="Ajouter le contact">
+            </form>
+            <ul id="newContactList" data-role="listview" data-inset="true" ></ul>
+            <a href="#ListContact" data-role="button" data-icon="arrow-r" data-iconpos="right">List Contact</a>
+        </div>
+        <div data-role="footer" data-position="fixed">
+            <h1>DIC3 &copy; 2024</h1>
+        </div>
+    </div> 
+</body>
+</html>
